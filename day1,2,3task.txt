@@ -1,0 +1,297 @@
+
+DAY-1 and DAY-2:
+1.write a program to take your age as input and print it
+
+input:
+student_age=[20]
+print(student_age)
+
+output:
+[20]
+
+2.write a program using f-string to print your college name
+
+input:
+
+college_name=["ksrm college of engineering"]
+print(f"college name is{college_name}")
+
+output:
+
+college name is['ksrm college of engineering']
+
+3.print numbers from 1 to 10 using for loop
+
+input:
+
+numbers=[1,2,3,4,5,6,7,8,9,10]
+for i in range(1):
+  print(numbers)
+
+output:
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+4.create a list of 5 fruits and print each fruit using loop.
+
+input:
+
+fruits=["apple","banana","orange","mango","kiwi"]
+for i in fruits:
+  print(i)
+
+output:
+
+apple
+banana
+orange
+mango
+kiwi
+
+5.Add and remove elements from a list using list methods.
+
+input:
+
+list=['h','e','l','l','o',1,2,3]
+list.append(['h','i'])
+list.remove(1)
+print(list)
+
+output:
+
+['h', 'e', 'l', 'l', 'o', 2, 3, ['h', 'i']]
+
+6.create a list of marks and print the highest value.
+
+input:
+
+marks=[33,77,84,89,76,54]
+highest=max(marks)
+print("highest marks",highest)
+
+output:
+
+highest marks 89
+
+DAY-3:dictionary
+
+1.create a dictionary for a product with keys:name,price,brand.print each key-value pair.
+
+input:
+
+product = {
+    "name": "Laptop",
+    "price": 55000,
+    "brand": "Dell"
+}
+
+for key, value in product.items():
+    print(key, ":", value)
+
+output:
+
+name : Laptop
+price : 55000
+brand : Dell
+
+2.add a new key 'in_stock' with value true.print the updated dictionary.
+
+input:
+
+
+product = {
+    "name": "Laptop",
+    "price": 55000,
+    "brand": "Dell"
+}
+product["in_stock"] = True
+print(product)
+
+output:
+
+{'name': 'Laptop', 'price': 55000, 'brand': 'Dell', 'in_stock': True}
+
+3.update the price to a new value and print the dictionary again.
+
+input:
+
+product = {
+    "name": "Laptop",
+    "price": 55000,
+    "brand": "Dell"
+}
+product["price"] = 60000
+
+print(product)
+
+output:
+
+{'name': 'Laptop', 'price': 60000, 'brand': 'Dell', 'in_stock': True}
+
+4.ask the user to enter a students name and marks in 3 subjects.store in dictionary and print.
+
+input:
+
+name = input("Enter student name: ")
+
+marks = {
+    "Math": int(input("Enter Math marks: ")),
+    "Science": int(input("Enter Science marks: ")),
+    "English": int(input("Enter English marks: "))
+}
+
+student = {
+    "name": name,
+    "marks": marks
+}
+
+print(student)
+
+output:
+
+Enter student name: nandini
+Enter Math marks: 96
+Enter Science marks: 85
+Enter English marks: 89
+{'name': 'nandini', 'marks': {'Math': 96, 'Science': 85, 'English': 89}}
+
+5.create a dictionary of 5 countries and their capitals.print only the country names using keys().
+
+input:
+
+countries = {
+    "India": "New Delhi",
+    "USA": "Washington D.C.",
+    "Japan": "Tokyo",
+    "France": "Paris",
+    "Australia": "Canberra"
+}
+
+print(countries.keys())
+
+output:
+
+dict_keys(['India', 'USA', 'Japan', 'France', 'Australia'])
+
+6.traverse a dictionary of 4 students and their scores.print each name and score using items()
+
+input:
+
+students = {
+    "harshitha": 85,
+    "nandini": 90,
+    "bharathi": 78,
+    "sravya": 88
+}
+
+for name, score in students.items():
+    print(name, ":", score)
+
+output:
+harshitha : 85
+nandini : 90
+bharathi : 78
+sravya : 88
+
+DAY-3:SETS
+
+1.create a set of 5 numbers with duplicates.print it and observe that duplicates are removed.
+
+input:
+
+numbers = {1, 2, 2, 3, 4, 4, 5}
+
+print(numbers)
+
+output:
+
+{1, 2, 3, 4, 5}
+
+2.add the number 100 to the set and print it.
+
+input:
+
+numbers = {1, 2, 2, 3, 4, 4, 5}
+numbers.add(100)
+print(numbers)
+
+output:
+
+{1, 2, 3, 4, 5, 100}
+
+3.try remove() on a value that is not in the set.then try discard().write down what happens.
+
+input:
+
+
+
+numbers = {1, 2, 3, 4, 5}
+try:
+    numbers.remove(10)
+except KeyError:
+    print("remove() gives KeyError because 10 is not in the set")
+numbers.discard(10)
+
+print("discard() does not give an error")
+print(numbers)
+
+output:
+
+remove() gives KeyError because 10 is not in the set
+discard() does not give an error
+{1, 2, 3, 4, 5}
+
+4.create set A of subjects you like and set B of subjects your friend likes.find subjects both of you like.
+
+input:
+
+A = {"Math", "Science", "English", "Computer"}
+
+B = {"Science", "History", "Computer", "Art"}
+
+common_subjects = A.intersection(B)
+
+print("Subjects both like:", common_subjects)
+
+output:
+
+Subjects both like: {'Computer', 'Science'}
+
+5.using the same sets,find all subjects that either of you likes.
+
+input:
+
+A = {"Math", "Science", "English", "Computer"}
+B = {"Science", "History", "Computer", "Art"}
+all_subjects = A.union(B)
+print("All subjects:", all_subjects)
+
+output:
+
+All subjects: {'Math', 'History', 'Science', 'Computer', 'Art', 'English'}
+
+6.convert this list to remove duplicates:[1,2,2,3,4,4,5].print the result
+
+input:
+
+
+numbers = [1, 2, 2, 3, 4, 4, 5]
+
+unique_numbers = set(numbers)
+
+print(unique_numbers)
+
+output:
+
+{1, 2, 3, 4, 5}
+
+
+
+
+
+
+
+
+
+
+
